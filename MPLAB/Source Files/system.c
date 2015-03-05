@@ -13,7 +13,8 @@ system.c - low level handle system commands
 		- overall joint code review
  ver 1.03 date: 21.9.12
 		- BOOT table		
-		
+ ver 1.06 date 1.12.14
+		- Add support to maintenance board
 ********************************************************************************
 	General:
 	========
@@ -29,7 +30,7 @@ following are the functions for handling system commands, like get version...
 #include "HardwareProfile.h"				//Common
 #include "HardwareProfileRemappable.h"		//Common
 #include "misc_c.h"							//Common	//YL 19.9
-#include "p24FJ256GB110.h"					//Common	
+#include "p24FJ256GB110.h"					//Common
 #include "accelerometer.h"					//Devices	
 #include "analog.h"							//Devices
 #include "flash.h"							//Devices
@@ -48,12 +49,17 @@ following are the functions for handling system commands, like get version...
 #include "SymbolTime.h"						//TxRx - Application
 #include "HardwareProfileTxRx.h"			//TxRx - Common	
 #include "TimeDelay.h"						//TxRx - Common	
+#if defined MAINTENANCE_CARD
+#include "maintenance.h"			
+#endif	
+
 
 /***** GLOBAL VARIABLES: ******************************************************/
-char			*g_version = "1.05.10/2/2013"; 		// program version number. to be incremented each new release - Yossi's update - according to "3.2.13 network recovery update" folder from dropbox
+char			*g_version = "1.06.08/12/2014"; 		// program version number. to be incremented each new release - Yossi's update - according to "3.2.13 network recovery update" folder from dropbox
 char   			g_curr_boot_cmd[MAX_BOOT_CMD_LEN];	//YL 17.9 the next boot command to be executed
 BOOL   			g_sn_write = FALSE;					//YL 11.11 to protect the last EEPROM's byte which stores the serial number of a stone 
 unsigned int	g_vbat_level;						// the voltage sampled at AN10, updated by Timer4 state machine
+
 
 /***** INTERNAL PROTOTYPES: ***************************************************/
 void handle_get_error(void);
@@ -63,6 +69,7 @@ void display_welcome(void);
 #define MAX_USB_RETRIES 1000 //YS 17.8
 //defines the time we wait for a USB connection - each retry is 2mSec long
 //For example - 1000 means we wait for 2 seconds.
+
 
 /*******************************************************************************
 // init_all()
@@ -106,13 +113,17 @@ void init_all(void)
 		TxRx_Init(FALSE);			//YS 17.8//YS 17.11
 	}
 #elif defined COMMUNICATION_PLUG //YS 17.8
+
 	USBEnableInterrupts();//YS 22.12
 	if(g_usb_connected == FALSE) {
 		while((USBGetDeviceState() < CONFIGURED_STATE)); //YS 17.8
 		//comm_plug has to have a USB connection
 		g_usb_connected = TRUE; //YS 17.8
 	}
-	TxRx_Init(FALSE);			//YS 17.8//YS 17.11
+	//TxRx_Init(FALSE);			//YS 17.8//YS 17.11
+	#if defined MAINTENANCE_CARD
+	init_maintenance();//YM 6/9/14
+	#endif
 #endif //#ifdef WISDOM_STONE
 
 #ifdef LCD_INSTALLED
@@ -150,10 +161,16 @@ void init_power(void)
 	PWR_SHUTDOWN = 1; 	// hold power enable signal for the 3.3v DC-DC
 	// disable all voltage sources, besides 3.3v (that must be enabled as long as the system is on).
 	// the rest of the sources can be enabled by "spower" command if desired 
+#if defined MAINTENANCE_CARD //YM - need supply to open the realys
+	PWR_EN_5V	= 0; //TODO - Yagel and lior TBD
+	PWR_EN_12V	= 0;
+	PWR_EN_M12V	= 0;
+#else
 	PWR_EN_5V	= 0; 
 	PWR_EN_12V	= 0;
 	PWR_EN_M12V	= 0;
-	
+#endif
+
 	// define PULLUPS on the following inputs:
 	CNPU2bits.CN19PUE = 1; // STAT1 - CN19
 	CNPU4bits.CN61PUE = 1; // STAT2 - CN61

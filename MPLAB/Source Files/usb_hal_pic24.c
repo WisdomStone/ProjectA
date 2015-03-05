@@ -180,6 +180,7 @@ BOOL USBSleepOnSuspend(void)
     return TRUE;
 }
 
+
 #endif //__C30__
 
 #endif //USB_HAL_PIC24F_C

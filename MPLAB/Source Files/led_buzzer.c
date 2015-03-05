@@ -33,10 +33,12 @@ the following functions:
 #include "p24FJ256GB110.h"		//Common
 #include "ads1282.h"			//Devices
 #include "led_buzzer.h"			//Devices
+#if defined MAINTENANCE_CARD
+#include "maintenance.h"			
+#endif	
 
 /***** GLOBAL VARIABLES: ******************************************************/
 int g_buzz_period = 0; 			// in order to play buzzer sound at 1Khz for some period (in mSec units) set this global variable to the period
-
 /***** DEFINES: ***************************************************************/
 #define ADS1282_FREQ	400		// external ADC desired sample frequency [Hz]
 // assume we have Fcy = 16Mhz
@@ -46,6 +48,7 @@ int g_buzz_period = 0; 			// in order to play buzzer sound at 1Khz for some peri
 #define TIMER_4_MASK 	0xA030
 //#define TIMER_4_PERIOD	320		// we 2.5ms for ADC
 #define TIMER_4_PERIOD	((16000000 / 256) / ADS1282_FREQ)
+
 
 /*******************************************************************************
 // init_timer4()
@@ -81,6 +84,7 @@ void __attribute__((__interrupt__, auto_psv, __shadow__)) _T4Interrupt(void)
 	static unsigned int 	timer4_tick_counter = 0;
 	static int 				power_switch_msec_counter = 0;
 	static unsigned int     adc_stage = SAMPLE_STAGE;
+	static unsigned int     phone_reset_state = IDLE;
 	static unsigned long	led_cycle_time = 1600;
 	
 	//===============
@@ -197,7 +201,12 @@ void __attribute__((__interrupt__, auto_psv, __shadow__)) _T4Interrupt(void)
 	// sparse entry to sampling procedure, to reduce load from Timer function
 	// perform a single sample stage every ~400mSec
 	if ((timer4_tick_counter & 0x00FF) == 0x0000) {
+	//when the maintenance card is connected we sample the 12V battery voltage
+	#if defined MAINTENANCE_CARD
+		detect_12v_bat_level(adc_stage); //YM 19/9/14
+	#else
 		detect_analog_input(adc_stage);
+	#endif
 		// advance the state machine one step:
 		switch (adc_stage) {
 			case SAMPLE_STAGE:
@@ -211,6 +220,42 @@ void __attribute__((__interrupt__, auto_psv, __shadow__)) _T4Interrupt(void)
 				break;
 		}
 	}
+
+	//==================
+	// Phone Restart
+	//=================
+	#if defined MAINTENANCE_CARD
+	if (phone_reseting){
+		if ((timer4_tick_counter & 0x03FF) == 0x0000) {
+		switch (phone_reset_state) {
+			case IDLE:
+				phone_reset_state = BAT_ON_POWER_ON;
+				break;
+			case BAT_ON_POWER_ON: 
+				phone_reset_state = POWER_OFF;
+				break;
+			case POWER_OFF: 
+				phone_reset_state = PHONE_START;
+				break;
+			case PHONE_START:
+					phone_reset_state = USB_OFF;
+				break;
+			case USB_OFF:
+				phone_reset_state = USB_ON;
+				break;
+			case USB_ON:
+				if ((timer4_tick_counter & 0x7FFF) == 0x0000){
+					phone_reset_state = IDLE;
+				}
+				break;
+			}
+			restart_phone(phone_reset_state);
+		}
+	}
+	else {
+		phone_reset_state = IDLE;
+	}
+	#endif
 
 	IFS1bits.T4IF = 0; // reset Timer4 interrupt flag and Return from ISR
 }

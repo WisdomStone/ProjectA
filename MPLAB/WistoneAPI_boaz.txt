@@ -252,7 +252,7 @@ Application commands: app <sub command> <optional parameters>
 			  might be displayed twice (it happens if the range of the sectors requested in TS mode
 			  includes SS <start sector address>); 
 			  if so - then the first header belongs to TS and the second one - to SS
-- 	app stop
+- 	app app
 	- no parameters
 	- stop the current active mode (Sampling/storing/transmiting), even if not completed the needed num_of_blocks x 0.5KB samples
 	- when done, returns: "stopped"

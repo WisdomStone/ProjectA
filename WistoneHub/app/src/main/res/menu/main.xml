@@ -1,0 +1,21 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.wistone.app.MainActivity" >
+    <item android:id="@+id/Restart_setting"
+        android:title="Shut Down"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+    <item android:id="@+id/getStatus_setting"
+        android:title="Hub Status"
+        android:orderInCategory="200"
+        app:showAsAction="never" />
+    <item android:id="@+id/getCP_connection_status_setting"
+        android:title="CP Status"
+        android:orderInCategory="200"
+        app:showAsAction="never" />
+    <item android:id="@+id/update_server_IP_setting"
+        android:title="Update Server IP"
+        android:orderInCategory="200"
+        app:showAsAction="never" />
+</menu>

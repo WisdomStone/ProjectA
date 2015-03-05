@@ -14,4 +14,9 @@ void analog_init(void);
 //int analog_sample(void);
 int detect_analog_input(int adc_stage);
 
+#if defined (MAINTENANCE_CARD) 
+int detect_12v_bat_level(int adc_stage);
+#endif
+
+
 #endif //__ANALOG_H__

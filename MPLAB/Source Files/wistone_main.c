@@ -183,9 +183,9 @@ void main(void)
 			}
 			//YS 5.1.13
 			if (!runPlugCommand()) {
-				while (TxRx_SendCommand(g_in_msg) != TXRX_NO_ERROR) {//YS 5.10 checking if resync should run//YS 17.11
-					TxRx_Init(TRUE); //YS 17.11
-				}
+			//	while (TxRx_SendCommand(g_in_msg) != TXRX_NO_ERROR) {//YS 5.10 checking if resync should run//YS 17.11
+			//	TxRx_Init(TRUE); //YS 17.11
+			//	}
 			}
 		}
 #endif // #if defined (USBCOM)

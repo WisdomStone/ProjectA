@@ -1,3 +1,16 @@
 1 app start ss 1 1 single
 2 eeprom format
 2 eeprom format
+hub gstat 
+hub gstat 
+hub gstat 
+hub gstat 
+ w buzzer 0 1
+ w buzzer 0 2
+ w buzzer 0 2
+ w buzzer 0 2
+ w buzzer 0 2
+ w buzzer 0 2
+ w buzzer 0 2
+hub gstat 
+hub gstat 

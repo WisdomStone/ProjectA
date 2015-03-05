@@ -250,3 +250,130 @@
 2 w led 2 0
 2 r eeprom 0 
 2 r eeprom 0 
+hub gstat
+hub gstat
+hub gstat
+hub gstat
+hub gstat
+hub gstat
+hub gstat
+hub gstat
+hub gstat 
+hub gstat 
+hub gstat 
+hub gstat 
+plug phone_reset 
+hub gstat 
+plug phone_reset 
+hub gstat 
+plug stat 
+hub gstat 
+plug stat 
+plug phone_reset 
+hub gstat 
+plug stat 
+hub gstat 
+plug stat 
+hub gstat 
+plug stat 
+hub gstat 
+plug stat 
+plug phone_reset 
+hub gstat 
+
+plug stat 
+
+hub gstat 
+
+plug stat 
+
+plug phone_reset 
+hub gstat 
+
+plug stat 
+hub gstat 
+plug phone_reset 
+hub gstat 
+plug phone_reset 
+hub gstat 
+plug stat 
+plug phone_reset 
+hub gstat 
+plug stat 
+plug phone_reset 
+hub gstat 
+plug stat 
+hub gstat 
+plug stat 
+plug phone_reset 
+plug phone_reset 
+hub gstat 
+plug stat 
+hub gstat 
+plug stat 
+plug phone_reset 
+plug phone_reset 
+plug stat
+plug phone_reset
+ plug phone_reset 
+plug stat
+ plug phone_reset 
+plug stat
+plug phone_reset 
+plug_stat
+plug_phone_reset 
+plug_stat
+plug_stat
+ w buzzer 0 2
+plug_phone_reset 
+plug_phone_reset 
+plug_phone_reset 
+plug_phone_reset 
+plug_stat
+ plug_phone_reset 
+plug_stat
+plug_stat
+plug_stat
+plug_stat
+plug_stat
+plug_stat
+plug_stat
+plug_stat
+plug_stat
+plug_stat
+plug_phone_reset
+plug_stat
+plug_stat 
+plug_phone_reset
+plug_stat 
+plug_stat 
+plug_stat 
+plug_stat 
+plug_stat 
+plug_stat 
+plug_stat 
+plug_stat 
+plug_phone_reset
+hub gstat 
+hub gstat 
+hub gstat 
+plug phone_reset 
+hub gstat 
+plug phone_reset 
+hub gstat 
+hub gstat 
+plug phone_reset 
+hub gstat 
+hub gstat 
+plug phone_reset 
+plug phone_reset 
+plug phone_reset 
+plug phone_reset 
+hub gstat 
+hub gstat 
+plug phone_reset 
+hub gstat 
+hub gstat 
+hub gstat 
+hub gstat 
+hub gstat 

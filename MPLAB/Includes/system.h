@@ -15,6 +15,7 @@ extern char 		g_curr_boot_cmd[MAX_BOOT_CMD_LEN];
 extern BOOL 		g_sn_write;
 extern unsigned int	g_vbat_level;
 
+
 /***** FUNCTION PROTOTYPES: ***************************************************/
 void init_all(void);	
 void init_power(void); 

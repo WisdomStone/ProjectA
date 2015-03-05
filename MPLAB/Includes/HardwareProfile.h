@@ -4,7 +4,40 @@
 //OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
 #ifdef WISTONE_BOARD
 //OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+#if defined MAINTENANCE_CARD
+//Maintenance card
+//YM 5/9/14
+//control outputs pins to set the relays 
+//the maintenance can control the following:
+// -phone power switch,
+// -phone battery
+// -VBUS (+5V between phone and android)
+// -12V power supply
 
+//battary
+#define MAINTENANCE_LAT_BAT_RELAY		LATBbits.LATB9
+#define MAINTENANCE_TRIS_BAT_RELAY 		TRISBbits.TRISB9
+//switch
+#define MAINTENANCE_LAT_POWER_RELAY		LATAbits.LATA14
+#define MAINTENANCE_TRIS_POWER_RELAY	TRISAbits.TRISA14
+//USB
+#define MAINTENANCE_LAT_USB_RELAY	LATBbits.LATB12
+#define MAINTENANCE_TRIS_USB_RELAY	TRISBbits.TRISB12
+//12V
+#define MAINTENANCE_LAT_12V_RELAY	LATBbits.LATB1
+#define MAINTENANCE_TRIS_12V_RELAY	TRISBbits.TRISB1
+
+//charge control inputs:
+//input indicating is the battery is charging (Chrg_Charge)
+#define CG_PORT_CHARGE_STATUS		PORTDbits.RD15
+#define CG_TRIS_CG_CHARGE_STATUS    TRISDbits.TRISD15
+//input indicating battery status ("0,1"-80%, "1,1"-50%, "1,0"-25%)
+#define CG_PORT_0_BAT_LEVEL			PORTCbits.RC2
+#define CG_TRIS_0_BAT_LEVEL 	   	TRISCbits.TRISC2
+#define CG_PORT_1_BAT_LEVEL			PORTEbits.RE7
+#define CG_TRIS_1_BAT_LEVEL   		TRISEbits.TRISE7
+
+#endif
 //i2c**************************************************************************/
 //YL 25.8: I2C1 (accelerometer) refers to RA14, RA15; I2C2 (ERT) refers to RA2, RA3 
 #define I2C2_TRIS_SDA 				TRISAbits.TRISA3 		
@@ -85,7 +118,7 @@
 
 //OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
 #elif defined EXPLORER16
-//OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+//OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO\
 
 //i2c**************************************************************************/
 #define I2C2_TRIS_SDA 	TRISAbits.TRISA3	
@@ -136,5 +169,7 @@
 //	- DB7	- RE7  - output
 
 #endif	// #if defined WISTONE_BOARD
+
+
 
 #endif 	//__HARDWAREPROFILE_H__

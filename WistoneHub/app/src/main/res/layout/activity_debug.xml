@@ -1,0 +1,42 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    tools:context="com.wistone.app.DebugActivity">
+
+    <ListView
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:id="@+id/listView_messages"
+        android:layout_gravity="center_horizontal"
+        android:clickable="false"
+        android:layout_weight="0.98"
+        android:transcriptMode="alwaysScroll"
+        android:visibility="visible"
+        android:background="#ffe3d2ff" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/editText_message"
+            android:layout_weight="1"
+            android:inputType="textNoSuggestions|textMultiLine"
+            android:background="#fffffcb9"
+            android:gravity="left|center_vertical"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_send"
+            android:id="@+id/button_sendMessage"
+            android:layout_gravity="center_vertical|right"
+            />
+    </LinearLayout>
+</LinearLayout>

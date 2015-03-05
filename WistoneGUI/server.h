@@ -2,8 +2,8 @@
 
 #include <windows.h>
 
-#define DATA_BUF_LEN 200
-#define CNSL_MSG_LEN 200
+#define DATA_BUF_LEN 500
+#define CNSL_MSG_LEN 500
 #define PING_MSG_LEN 4
 
 namespace WistoneGUI {

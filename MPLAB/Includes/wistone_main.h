@@ -2,7 +2,6 @@
 #define __WISTONE_MAIN_H__
 
 /***** INCLUDE FILES: *********************************************************/
-
 #include "GenericTypeDefs.h"
 #include "command.h"
 
@@ -13,6 +12,14 @@
 //OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
 //#define WISDOM_STONE
 #define COMMUNICATION_PLUG
+
+//OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+//Uncomment This if the maintenance board is connected: 
+//The maintenance card design to connect where the sampler use to be when we are
+//in communication plug mode.
+//Note: if this if define is set, the COMMUNICATION_PLUG define must be set as well
+//OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+#define MAINTENANCE_CARD
 
 //OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
 //Uncomment ONE of the 2 following lines to choose mode of communication:

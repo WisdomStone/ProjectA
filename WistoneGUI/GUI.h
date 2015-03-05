@@ -680,6 +680,8 @@ namespace WistoneGUI
 
 	// Hub Tab - Statistics:
 	private: System::Windows::Forms::TabPage^  statistics_HubTab_TabPage; // YL 16.6 added
+	private: System::Windows::Forms::Button^   get_hub_stats_Button; //Yagel 1.8
+	private: System::Windows::Forms::Button^   phone_reset_Button; //Yagel 1.8
 	
 	// allTabs:
 	private: System::Windows::Forms::TabControl^  allTabs;
@@ -1117,6 +1119,8 @@ namespace WistoneGUI
 			this->tabHub = (gcnew System::Windows::Forms::TabPage());
 			this->hubTab = (gcnew System::Windows::Forms::TabControl());
 			this->statistics_HubTab_TabPage = (gcnew System::Windows::Forms::TabPage());
+			this->get_hub_stats_Button = (gcnew System::Windows::Forms::Button());
+			this->phone_reset_Button = (gcnew System::Windows::Forms::Button());
 			this->x_TextBox = (gcnew System::Windows::Forms::TextBox());
 			this->z_TextBox = (gcnew System::Windows::Forms::TextBox());
 			this->y_TextBox = (gcnew System::Windows::Forms::TextBox());
@@ -5832,12 +5836,38 @@ namespace WistoneGUI
 			// statistics_HubTab_TabPage
 			// 
 			this->statistics_HubTab_TabPage->BackColor = System::Drawing::SystemColors::Control;
+			this->statistics_HubTab_TabPage->Controls->Add(this->get_hub_stats_Button);//Yagel 1.8.14
+			this->statistics_HubTab_TabPage->Controls->Add(this->phone_reset_Button);//Yagel 1.8.14
 			this->statistics_HubTab_TabPage->Location = System::Drawing::Point(4, 22);
 			this->statistics_HubTab_TabPage->Name = L"statistics_HubTab_TabPage";
 			this->statistics_HubTab_TabPage->Padding = System::Windows::Forms::Padding(3);
 			this->statistics_HubTab_TabPage->Size = System::Drawing::Size(633, 317);
 			this->statistics_HubTab_TabPage->TabIndex = 0;
-			this->statistics_HubTab_TabPage->Text = L"Statistics";
+			this->statistics_HubTab_TabPage->Text = L"Control";
+			//
+			//get_hub_stats_Button
+			//
+			this->get_hub_stats_Button->AutoSize = true;
+			this->get_hub_stats_Button->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
+			this->get_hub_stats_Button->Location = System::Drawing::Point(276, 250);
+			this->get_hub_stats_Button->Name = L"get_hub_stats_Button";
+			this->get_hub_stats_Button->Size = System::Drawing::Size(80, 28);
+			this->get_hub_stats_Button->TabIndex = 0;
+			this->get_hub_stats_Button->Text = L"Get Hub Stat";
+			this->get_hub_stats_Button->UseVisualStyleBackColor = true;
+			this->get_hub_stats_Button->Click += gcnew System::EventHandler(this, &GUI::get_hub_stats_Button_Click);
+			//
+			//phone_reset_Button
+			//
+			this->phone_reset_Button->AutoSize = true;
+			this->phone_reset_Button->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
+			this->phone_reset_Button->Location = System::Drawing::Point(100, 250);
+			this->phone_reset_Button->Name = L"phone_reset_Button";
+			this->phone_reset_Button->Size = System::Drawing::Size(80, 28);
+			this->phone_reset_Button->TabIndex = 0;
+			this->phone_reset_Button->Text = L"Restart Phone";
+			this->phone_reset_Button->UseVisualStyleBackColor = true;
+			this->phone_reset_Button->Click += gcnew System::EventHandler(this, &GUI::phone_reset_Button_Click);
 			// 
 			// x_TextBox
 			// 
@@ -6509,5 +6539,8 @@ namespace WistoneGUI
 
 /***T I M E R 7 server***/
 	private: System::Void	server_Timer_Tick(System::Object^  sender, System::EventArgs^  e);
+/********HUB*******/
+	private: System::Void	get_hub_stats_Button_Click(System::Object^ sender, System::EventArgs^ e);
+	private: System::Void	phone_reset_Button_Click(System::Object^ sender, System::EventArgs^ e);
 };
 }

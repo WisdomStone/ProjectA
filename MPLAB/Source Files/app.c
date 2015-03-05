@@ -518,6 +518,9 @@ void sampler_stop(void)	{
 //OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
 
 #include "app.h"				//Application
+#if defined MAINTENANCE_CARD
+#include "maintenance.h"
+#endif
 
 /******************************************************************************
 // runPlugCommand()
@@ -536,6 +539,49 @@ BOOL runPlugCommand(){
 			cmd_ok();
 			return TRUE;
 	}
+#if defined MAINTENANCE_CARD
+//Commands been write back to the server regarding the hub status:
+	else if (strcmp(g_curr_msg, "plug stat") == 0){
+		maintenance_status();
+		cmd_ok();
+		return TRUE;
+	}
+	else if (strcmp(g_curr_msg, "plug bat_r on") == 0){
+		set_bat_relay(1);
+		cmd_ok();
+		return TRUE;
+	}
+	else if (strcmp(g_curr_msg, "plug bat_r off") == 0){
+		set_bat_relay(0);
+		cmd_ok();
+		return TRUE;
+	}
+	else if (strcmp(g_curr_msg, "plug power_r on") == 0){
+		set_power_relay(1);
+		cmd_ok();
+		return TRUE;
+	}
+	else if (strcmp(g_curr_msg, "plug power_r off") == 0){
+		set_power_relay(0);
+		cmd_ok();
+		return TRUE;
+	}
+	else if (strcmp(g_curr_msg, "plug usb_r on") == 0){
+		set_usb_relay(1);
+		cmd_ok();
+		return TRUE;
+	}
+	else if (strcmp(g_curr_msg, "plug usb_r off") == 0){
+		set_usb_relay(0);
+		cmd_ok();
+		return TRUE;
+	}
+	else if (strcmp(g_curr_msg, "plug phone_reset") == 0){
+		restart_phone(BAT_OFF);
+		//cmd_ok();
+		return TRUE;
+	}
+#endif
 	return FALSE;
 }
 

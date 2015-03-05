@@ -38,12 +38,17 @@ Battey and Charging status
 #include "error.h"			//Application
 #include "p24FJ256GB110.h"	//Common
 #include "analog.h"			//Devices
+#include "wistone_main.h"
+#if defined (MAINTENANCE_CARD)
+#include "maintenance.h"
+#endif
 
 /*******************************************************************************
 // analog_init()
 // in Wistone we have two optional analog sources:
 // - AN12 - Microphone - not supported at this stage
 // - AN10 - Battery level
+// - AN8  - 12V maintenance battery level - YM 19/9/14
 //
 // initialize the internal ADC:
 // - prepare for sampling
@@ -54,7 +59,11 @@ void analog_init(void)
 	AD1CON1	= 0x0000; // Sample when SAMP=1, convert when SAMP=0	
 	AD1CON2 = 0x0000; // No channel scan, always use MUX-A
 	AD1CON3 = 0x0A0A; // No timers set
-	AD1PCFGL = 0xFBFF;	// set all pins to digital, except fot AN10:
+#if defined (MAINTENANCE_CARD)
+	AD1PCFGL = 0xFAFF;	// set all pins to digital, except for AN10 and AN8:- YM 19/9/14:
+#else
+	AD1PCFGL = 0xFBFF;	// set all pins to digital, except for AN10 
+#endif
 	AD1CON1bits.ADON = 1; // turn ADC ON
 }
 
@@ -99,3 +108,44 @@ int detect_analog_input(int adc_stage) {
 
 	return (0);
 }
+
+
+/*******************************************************************************
+// detect_12v_bat_level()
+// - Maintenance Battery Level:
+//   - read battery level value from ADC
+//   - convert it to 10bits number
+//   - then store in global variable: g_12vbat_level
+// input:
+// - adc_stage - SAMPLE_STAGE, CONVERT_STAGE, UPDATE_STAGE
+// output:
+// global:
+// - g_vbt_level - representing the value sampled at the voltage divider of the battery on Power Board 
+// return:
+// - 0 - on success
+// - 1 - on error
+/*******************************************************************************/
+#if defined (MAINTENANCE_CARD) 
+int detect_12v_bat_level(int adc_stage) {
+		//set ADC parameters
+		AD1CHS  = 0x0808; // select the channel AN8 for both MUX-A and MUX-B. select Vr- (= GND in our case) for the negative reference
+		// this section determines what action to take according to entry number
+		switch (adc_stage) {
+		case SAMPLE_STAGE:						// first enrty, sample
+			AD1CON1bits.SAMP = 1;
+			break;
+		case CONVERT_STAGE:						// second enrty, convert
+			AD1CON1bits.SAMP = 0; 	
+			break;
+		case UPDATE_STAGE:						// third enrty, global variables update
+				// read the ADC value:
+				g_12vbat_level = ((unsigned int)ADC1BUF0 +(unsigned int)ADC1BUF1 + (unsigned int)ADC1BUF2 + (unsigned int)ADC1BUF3 + (unsigned int)ADC1BUF4 + (unsigned int)ADC1BUF5 + (unsigned int)ADC1BUF6 + (unsigned int)ADC1BUF6 + (unsigned int)ADC1BUF7 + (unsigned int)ADC1BUF8 + (unsigned int)ADC1BUF9)/10 ;
+			break;
+		default:
+			return(1);
+		}
+		return (0);		
+}
+
+
+#endif

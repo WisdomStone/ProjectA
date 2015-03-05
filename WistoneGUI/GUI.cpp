@@ -3262,3 +3262,46 @@ System::Void GUI::server_Timer_Tick(System::Object^  sender, System::EventArgs^ 
 	}
 	server_Timer->Start();
 }
+
+/****************************************************************************
+Function:
+private: System::Void get_hub_stats_Button_Click(System::Object^  sender, System::EventArgs^  e)
+***************************************************************************/
+System::Void GUI::get_hub_stats_Button_Click(System::Object^  sender, System::EventArgs^  e)
+{
+	StreamWriter^ sw = System::IO::File::AppendText(commandsLogFilePath);
+
+	sw->WriteLine("hub gstat ");
+	sw->Close();
+	try
+	{
+		// Write the data in the text box to the open serial port
+		sendCommands_TextBox->Text =  "hub gstat ";
+		buttonSendFlag = true;
+	}
+	catch (...)
+	{
+	}
+}
+/****************************************************************************
+Function:
+private: System::Void phone_reset_Button_Click(System::Object^  sender, System::EventArgs^  e)
+***************************************************************************/
+System::Void GUI::phone_reset_Button_Click(System::Object^  sender, System::EventArgs^  e)
+{
+	StreamWriter^ sw = System::IO::File::AppendText(commandsLogFilePath);
+
+	sw->WriteLine("plug phone_reset ");
+	sw->Close();
+	try
+	{
+		// Write the data in the text box to the open serial port
+		sendCommands_TextBox->Text = "plug phone_reset ";
+		buttonSendFlag = true;
+	}
+	catch (...)
+	{
+	}
+}
+
+

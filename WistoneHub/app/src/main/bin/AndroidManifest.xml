@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.wistone.app" >
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="19" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.wistone.app.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <meta-data
+                android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED"
+                android:resource="@xml/device_filter" />
+        </activity>
+        <activity
+            android:name="com.wistone.app.DebugActivity"
+            android:label="@string/title_activity_debug"
+            android:parentActivityName="com.wistone.app.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+
+                android:value="MainActivity" />
+        </activity>
+    </application>
+
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- YL 14.5 -->
+    <uses-feature android:name="android.hardware.usb.host" android:required="true"/>
+</manifest>
