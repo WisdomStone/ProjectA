@@ -1,0 +1,4 @@
+-changed "app reconnect" to "plug reconnect" command.
+-relevant change to API
+-changed timings for transmission retrys to get better USB connection.
+-logic of TxRx_PeriodTasks changed to fit in with previous changes.

@@ -1,0 +1,252 @@
+1 app start ss 1 1 single
+1 app start ts 1 1 usb
+1 app start ss 1 1 single
+1 app start ts 1 1 usb
+1 app start ss 1 1 single
+1 app start ts 1 1 usb
+1 app start ts 10 1 usb
+1 app start ts 2 1 usb
+1 app start ss 2 1 single
+1 app start ts 2 1 usb
+0 sys gver 
+0 temp gtemp
+1 app start ss 2 2 single
+0 rtc gtime
+0 rtc gdate
+1 app start ts 2 20 usb
+0 sys gver 
+1 app start ss 1 1 single
+2 app start ts 1 1 usb
+1 app start ts 1 1 usb
+0 temp gtemp
+1 app start ss 1 1 single
+1 app start ts 1 1 usb
+1 app start ts 1 10 usb
+ app stop
+1 app start ss 1 1 single
+1 app start ts 1 1 usb
+1 app start ss 1 1 single
+1 app stop
+1 app start ts 1 1 usb
+1 app start ts 1 1 usb
+1 app stop
+1 app start ts 1 1 usb
+1 app start ts 1 1 usb
+1 app stop
+1 app start ts 1 1 usb
+1 app start ss 1 1 single
+1 app stop
+1 app start ts 1 1 usb
+1 app stop
+1 app start ts 1 1 usb
+1 app stop
+1 app start ss 1 1 single
+1 app start ss 1 1 single
+1 app start ss 1 1 single
+1 app start ss 1 1 single
+1 app start ts 15 1 usb
+1 app start ts 15 1 usb
+1 app stop
+1 app start ts 15 1 usb
+1 app start ts 25 1 usb
+1 app stop
+1 app start ts 25 1 usb
+1 app start ss 5 1 single
+1 app start ts 5 1 usb
+1 app start ts 5 1 usb
+2 app start ss 2 2 single
+2 app start ts 2 2 usb
+2 app start ss 2 2 single
+0 rtc gtime
+0 rtc gdate
+0 temp gtemp
+2 app start ts 2 2 usb
+2 app start ss 20 2 single
+2 app stop
+2 app start ss 20 2 single
+2 app start ss 20 2 single
+2 app start ts 20 2 usb
+0 eeprom gboot 0 
+0 temp gtemp
+2 app start ts 4 2 usb
+0 app shutdown
+1 app start ss 1 1 single
+1 app start ts 10 1 usb
+1 app start ss 10 1 single
+0 temp gtemp
+1 app start ss 1 1 single
+0 rtc gtime
+0 r accmtr 0 
+0 temp gtemp
+0 temp gtemp
+0 temp gtemp
+0 temp gtemp
+0 temp gtemp
+0 temp gtemp
+0 temp gtemp
+0 temp gtemp
+0 temp gtemp
+0 temp gtemp
+0 temp gtemp
+0 temp gtemp
+0 temp gtemp
+0 temp gtemp
+0 temp gtemp
+0 temp gtemp
+1 app start ss 1 1 single
+0 app start ss 1 1 single
+0 app stop
+0 temp gtemp
+0 temp gtemp
+1 temp gtemp
+0 temp gtemp
+0 temp gtemp
+0 temp gtemp
+0 temp gtemp
+0 temp gtemp
+0 temp gtemp
+0 temp gtemp
+0 temp gtemp
+0 temp gtemp
+1 app start ss 1 1 single
+1 app stop
+1 app start ss 1 1 single
+1 app stop
+0 temp gtemp
+0 temp gtemp
+0 temp gtemp
+0 temp gtemp
+1 app start ss 1 1 single
+0 temp gtemp
+0 temp gtemp
+0 temp gtemp
+0 temp gtemp
+0 temp gtemp
+0 flash format 
+0 temp gtemp
+0 sys gver 
+0 temp gtemp
+0 temp gtemp
+0 temp gtemp
+0 temp gtemp
+5 temp gtemp
+1 w buzzer 0 1
+1 app start ss 1 1 single
+0 eeprom format
+5 temp gtemp
+1 app stop
+1 app start ss 1 1 single
+9 flash format 
+9 flash format 
+0 sys gver 
+1 app stop
+5 flash gcd 
+0 flash wsector 0 1
+0 temp gtemp
+0 temp gtemp
+0 temp gtemp
+0 app start ss 1 1 single
+1 app start ss 1 1 single
+0 temp gtemp
+5 temp gtemp
+1 app start ss 1 1 single
+1 temp gtemp
+1 rtc gtime
+1 rtc gtime
+1 rtc gtime
+1 temp gtemp
+1 temp gtemp
+0 temp gtemp
+0 temp gtemp
+1 temp gtemp
+1 eeprom sboot 0 
+1 app start ss 1 1 single
+0 sys gpower 
+0 sys gpower 
+0 sys gpower 
+2 temp gtemp
+2 temp gtemp
+2 temp gtemp
+2 temp gtemp
+2 temp gtemp
+2 temp gtemp
+2 temp gtemp
+2 w accmtr 0 2 
+2 flash format 
+2 flash format 
+2 flash format 
+1 temp gtemp
+1 w led 2 False
+1 w led 2 False
+2 rtc swakeup 1 
+1 w led 2 False
+1 w led 1 1
+1 w led 1 0
+1 w led 2 0
+2 temp gtemp
+1 temp gtemp
+1 w buzzer 0 0
+1 eeprom gboot 2 
+2 temp gtemp
+2 temp gtemp
+2 temp gtemp
+2 temp gtemp
+2 temp gtemp
+2 temp gtemp
+2 temp gtemp
+2 temp gtemp
+2 temp gtemp
+2 temp gtemp
+2 temp gtemp
+2 temp gtemp
+2 temp gtemp
+2 temp gtemp
+2 temp gtemp
+2 temp gtemp
+2 rtc gdate
+2 rtc gdate
+2 rtc gdate
+2 rtc gdate
+2 rtc gdate
+2 rtc gdate
+2 rtc gdate
+2 rtc gdate
+2 rtc gdate
+2 rtc gdate
+2 rtc gdate
+1 app start ss 1 1 single
+2 temp gtemp
+2 temp gtemp
+2 temp gtemp
+2 temp gtemp
+2 temp gtemp
+2 temp gtemp
+2 temp gtemp
+1 w led 2 1
+1 w led 2 0
+1 w led 2 0
+1 w led 2 0
+1 w led 2 0
+1 w led 2 0
+1 w led 2 0
+1 w led 2 0
+1 w led 2 0
+1 w led 2 0
+1 w led 2 0
+2 temp gtemp
+2 temp gtemp
+2 temp gtemp
+2 temp gtemp
+2 temp gtemp
+2 temp gtemp
+2 temp gtemp
+2 sys gver 
+2 sys gpower 
+2 sys gver 
+2 sys gver 
+ w led  1
+2 w led 2 1
+2 w led 2 0
+2 w led 2 0
+2 r eeprom 0 
+2 r eeprom 0 

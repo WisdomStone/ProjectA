@@ -1,0 +1,3 @@
+1 app start ss 1 1 single
+2 eeprom format
+2 eeprom format

@@ -1,0 +1,333 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="serialPort1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>507, 59</value>
+  </metadata>
+  <metadata name="comPorts_Timer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>16, 19</value>
+  </metadata>
+  <metadata name="openFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>367, 59</value>
+  </metadata>
+  <metadata name="connection_Timer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>155, 19</value>
+  </metadata>
+  <metadata name="commands_Timer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>303, 19</value>
+  </metadata>
+  <data name="config_AccmtrTab_TextBox.Text" xml:space="preserve">
+    <value>Accelerometer Sensor Configuration:
+
+^ Choose "Destination" ( Network ID of Wistone or 0 for Broadcast ), "Parameter" and "Value"
+^ Press "Update Value"
+
+ Parameter #1 is Sample Rate, Optional Values are: 
+                                                                             #1 is 100 Hz , #2 is 200 Hz and #4 is 400 Hz
+
+ Parameter #2 is Sample Scale, Optional Values are: 
+                                                                             #2 is (+/-2g),  #4 is (+/-4g) and #8 is (+/-8g)
+
+ Parameter #3 is Operational Mode, Optional Values are:
+                                                                             #1 is Normal,
+                                                                             #2 is Low Power and Noise,
+                                                                             #3 is High Resolution,
+                                                                             #4 is Low Power</value>
+  </data>
+  <data name="setWakeUp_WakeUpTab_TextBox.Text" xml:space="preserve">
+    <value>Set Wistone Wake Up:
+
+^ Choose "Destination" ( Network ID of Wistone or 0 for Broadcast )
+^ Set the delay until Wistone turns on; the delay is in minutes
+^ Press "Apply"
+
+   When Wistone is on, it executes pre-set boot commands, and then shuts down
+   For periodic wake up - use "Set Alarm" tab</value>
+  </data>
+  <data name="setAlarm_WakeUpTab_TextBox.Text" xml:space="preserve">
+    <value>Set Wistone to wake up periodically:
+
+^ Choose "Destination" ( Network ID of Wistone or 0 for Broadcast )
+^ Set next wake up time and date; enter 'x' for irrelevant wake up parameters
+^ Press "Apply"
+
+   When Wistone is on, it executes pre-set boot commands, and then shuts down
+   For single wakeup - use "Set Wake Up" tab</value>
+  </data>
+  <data name="setBoot_WakeUpTab_TextBox.Text" xml:space="preserve">
+    <value>Set Boot Commands ( a set of default commands that Wistone executes after it wakes up ):
+
+^ Choose "Destination" ( Network ID of Wistone or 0 for Broadcast )
+^ Choose "Entry Number" ( a number of boot table entry, 0 - 9 )
+^ Enter "Command" ( the boot command )
+    Leave this field empty if the specified boot table entry needs to be deleted
+^ Press "Apply"</value>
+  </data>
+  <metadata name="outputFile_start_AppTab_ToolTip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>137, 59</value>
+  </metadata>
+  <data name="outputFile_start_AppTab_TextBox.ToolTip" xml:space="preserve">
+    <value>Output File: Please insert only the file name, e.g: Data.
+Output directory would be created in current application directory, and it would contain 4 files in total:
+    - Data.txt and Data.bin - with samples retrieved in last TS session in textual and binary formats,
+    - CommandsLog.txt and SamplesLog.txt - with all the commands/samples since the creation of these files</value>
+  </data>
+  <data name="config_AppTab_TextBox.Text" xml:space="preserve">
+    <value>Accelerometer Sensor Configuration:
+
+^ Choose "Destination" ( Network ID of Wistone or 0 for Broadcast ), "Parameter" and "Value"
+^ Press "Update Value"
+
+ Parameter #1 is Sample Rate, Optional Values are: 
+                                                                             #1 is 100 Hz , #2 is 200 Hz and #4 is 400 Hz
+
+ Parameter #2 is Sample Scale, Optional Values are: 
+                                                                             #2 is (+/-2g),  #4 is (+/-4g) and #8 is (+/-8g)
+
+ Parameter #3 is Operational Mode, Optional Values are:
+                                                                             #1 is Normal,
+                                                                             #2 is Low Power and Noise,
+                                                                             #3 is High Resolution,
+                                                                             #4 is Low Power</value>
+  </data>
+  <data name="write_EepromTab_TextBox.Text" xml:space="preserve">
+    <value>Write Data Bytes to Wistone's EEPROM:
+
+^ Choose "Destination" ( Network ID of Wistone or 0 for Broadcast )
+^ Enter: "Address" -  the address within the 32K memory space, in decimal
+   The address should be more than 1 KB and a multiple of 64
+^ Enter: "Data" - 60 characters maximum
+^ Press "Write"</value>
+  </data>
+  <data name="setBoot_EepromTab_TextBox.Text" xml:space="preserve">
+    <value>Set Boot Commands ( a set of default commands that Wistone executes after it wakes up ):
+
+^ Choose "Destination" ( Network ID of Wistone or 0 for Broadcast )
+^ Choose "Entry Number" ( a number of boot table entry )
+^ Enter "Command" ( the boot command )
+    Leave this field empty if the specified boot table entry needs to be deleted
+^ Press "Apply"</value>
+  </data>
+  <data name="getBoot_EepromTab_TextBox.Text" xml:space="preserve">
+    <value>Get Boot Commands ( a set of default commands that Wistone executes after it wakes up ):
+
+^ Choose "Destination" ( Network ID of Wistone or 0 for Broadcast )
+^ Choose "Entry Number" ( a number of boot table entry )
+^ Press "Apply"</value>
+  </data>
+  <data name="writeLL_EepromTab_TextBox.Text" xml:space="preserve">
+    <value>Write byte to Wistone's EEPROM:
+
+^ Choose "Destination" ( Network ID of Wistone or 0 for Broadcast )
+^ Enter: "Address" ( of the byte within 32K memory space ) and "Data" ( valid range: 0 - 255 )
+^ Press "Write"</value>
+  </data>
+  <metadata name="statistics_Timer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>451, 19</value>
+  </metadata>
+  <metadata name="application_Timer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>585, 19</value>
+  </metadata>
+  <metadata name="sessionTimeout_Timer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>723, 20</value>
+  </metadata>
+  <metadata name="server_Timer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 59</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>35</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAICAgAAAAAACoEAAAFgAAACgAAAAgAAAAQAAAAAEAIAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAANnZ2QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAD6+voA0dHRAAAAAAAAAAAAzMzMAAAAAAAAAAAAAAAAAAAAAAAAAAAAXl5eAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAPr6+gDR0dEAAAAAAAAAAADMzMwAAAAAAAAAAAD9/f0A/f39AAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA+vr6ANHR0QAAAAAAAAAAAMzMzAAAAAAAAAAAANra
+        2gDZ2dkAAAAAAAEBAQAAAAAAAAAAAAAAAAD6+voAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAuX5+AMGIiADizMwA0dHRAAAAAAAAAAAAzMzMAAAA
+        AAAAAAAA2dnZANra2gAAAAAAAAAAAAAAAAD7+/sAAAAAAP39/QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC5fn4Av4aGAL+GhgC/hoYAyYuLAAAA
+        AADMzMwAAAAAAAAAAADZ2dkA2traADIyMgAAAAAAX19fAAAAAAAAAAAA1NTUAP39/QAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALl+fgC/hoYAv4aGAL+G
+        hgC/hoYAv4aGAL+GhgDAh4cAAAAAANnZ2QDa2toAAAAAADAwMADMzMwAAAAAAAAAAADQ0NAA+/v7AAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD60dEAuX5+AL+G
+        hgC/hoYAv4aGAL+GhgC/hoYAv4aGAL+GhgC/hoYAv4aGAIJxcQAAAAAAAAAAAMzMzAAAAAAAAAAAANDQ
+        0AD7+/sAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP/X
+        1wC1eHgAv4aGAL+GhgC/hoYAv4aGAL+GhgC/hoYAv4aGAL+GhgC/hoYAAAAAAL+GhgDLj48AyL6+AAAA
+        AAAAAAAA0NDQAPv7+wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAA/9fXAN6vrwDer68A4bOzAMKIiAC/h4cAv4aGAL+GhgC/hoYAv4aGAMSKigC/hoYAv4aGAL+G
+        hgC/hoYAv4aGAMeWlgDR1dUA+/v7AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAPz19QD/19cA3q+vAN6vrwDer68A3q+vAN6vrwDesLAA3a2tAL6FhQC/hoYAv4aGAL+G
+        hgC/hoYAv4aGAL+GhgC/hoYAv4aGAL+GhgDAh4cAy56eAAAAAAAAAAAAAAAAAMbGxgA8PDwA+/v7AAAA
+        AAAAAAAAAAAAAAAAAAAAAAAA/9jYAOOxsQDer68A3q+vAN6vrwDer68A3q+vAN6vrwDer68A3q+vAN6v
+        rwDfsbEAxY2NAL+GhgC/hoYAv4aGAL+GhgC/hoYAv4aGAL+GhgC/hoYAv4aGAAAAAAAAAAAAAAAAAAAA
+        AAAtLS0A6+vrAAAAAAAAAAAAAAAAAAAAAAD/19cA3q+vAN6vrwDer68A3q+vAN6vrwDer68A3q+vAN6v
+        rwDer68A3q+vAN6vrwDer68A3q+vAN+wsADKkpIAvYSEAL+GhgC/hoYAv4aGAL+GhgC/hoYAAAAAAAAA
+        AABiYmIAAAAAAERERAAAAAAAAAAAAAAAAAALCwsA0NDQAP/X1wDer68A3q+vAN6vrwDer68A3q+vAN6v
+        rwDer68A3q+vAN6vrwDer68A3q+vAN6vrwDer68A3q+vAN6vrwDer68A3q+vAN2trQC6g4MAv4aGAL+G
+        hgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/v7+AE1NTQAAAAAA/dPTAN6vrwDer68A3q+vAN6v
+        rwA4b10AToJxADpxYADer68AWbqaAGC/oADer68A3q+vAN6vrwDer68A3q+vAN6vrwDer68A3q+vAN6v
+        rwDer68AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATU1NAAAAAAAAAAAAAAAAAP/Z2QDdrq4A3q+vAN6v
+        rwDer68AOG5dAIHPtgCW79MA3q+vADduXABvzrEAas6uAN6vrwA4dWEAVIt5AEx+bgBRqo4A3q+vAN6v
+        rwDer68A3q+vAPHq6gAAAAAAAAAAAAAAAAAAAAAAAAAAAOHh4QAAAAAAAAAAAAAAAAAAAAAA/9fXAN6v
+        rwDer68A3q+vAFm6mgCBz7YAm7SlAGrOrgA3blwAgc+2AFm6mgBSq48A3q+vAJbu0gDer68AYsWlAGrO
+        rgDer68A3q+vAN6vrwDSqakAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAD/29sA3q+vAN6vrwBZupoAgc+2AJXBrABZupoAV7KVAIHPtgDer68Alu/TAN6vrwDer68AWbqaAJXw
+        0wCF1LsAas6uAN6vrwDer68A5bS0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAA+tTUANupqQDer68A3q+vAIHPtgBqzq4A3q+vAJbv0wCBz7YA0LOvAGdRUQBqzq4A3q+vAFyh
+        iwBVkH0Aas6uAGrOrgDer68A3q+vAOCxsQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAD/2NgA3q+vAN6vrwCO4cYAas6uAN6vrwBZupoAas6uAGrOrgDer68AZ1FRAFCn
+        iwBoxqcAas6uAN6vrwDer68A3q+vAN6vrwDer68AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAP/X1wDer68A3q+vAN6vrwDer68A3q+vAN6vrwDer68A3q+vAN6v
+        rwBnUVEAmHh4AIToyQA5cF8AVqGIAN6vrwDer68A3q+vAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA+dPTAN6vrwDer68A3q+vAN6vrwDer68A3q+vAN6v
+        rwDer68A3q+vAGdRUQCYeHgA3q+vAN6vrwDer68A3q+vAN6vrwD59vYAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgsbEA5ba2AOa1tQDhsbEA36+vAN6v
+        rwDer68A3q+vAN6vrwDer68AZ1FRAJh4eADer68A3q+vAN6vrwDer68A2b+/AAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB6enoAt7e3AAAAAAD68vIA9N/fAOvNzQAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHZ2dgCvr68AAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8PDwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATU1NAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACsr
+        KwBBQUEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAA///////+/////N8P//zZj//82Rf/8NkH//BYM//wCBP/4ACz/+AAM//g
+        AAP/wAABx8AAAIPAAADAAAAA/gAAAfuAAAH3gAAD/4AAB/8AAA//AAAf/wAAP/8AAD//AAB////I////
+        z////s////9P////z/////////////////8=
+</value>
+  </data>
+</root>
